@@ -1,0 +1,376 @@
+Shortcuts:[alt+ any arrow to move],[alt+ lmb : to put multiple cursor]
+	  []
+1.print(''):  for printing [Strings need ("",'') but numerical digits dont need any comas].
+
+2.\n : used to spilt the output in two different lines (used in print) [\ and not /] aka Escape sequence.
+     EG:
+     	input: 	 print("hello world \n hi")
+	output:  hello world 
+		 hi
+3. # : used as comment line [ctrl+\: to turn any line into comment line].
+4. ''' or """ :multiple line comment.
+5. sep="" : used to separate the words by "".
+ 	  EG:
+	     input: print("hello world my name is shubham",6,7,sep=",")
+	     output: 	hello world my name is shubham,6,7
+
+		input: print(6,7,sep="+",end="=13\n")     {[\n is to be used else the next line will merge into the prev line]}
+	  	       print('shubham')
+		output: 6+7=13
+		        shubham
+6. Variables and Data types:
+			       	* type(): tells the type of the variable.
+				* int: integer.
+				* float: decimal.
+				* complex: imaginary numbers eg: 6+2i [made using: complex(8,2)].
+				* str: sentences or words.
+				* list: aka array and is mutable(can be changed after creation).
+				* tuple: also array but it is not unmutable(cannot be changed after creation).
+				* dict: used for mapping of data.
+				* pass: used to skip the line for the compiler.
+7. Operators : 
+		* Arithmetic Operator : +,-,*,/,% and //[aka floor division used to get the quotent in round figures]
+		* Conditional operators: >,<,<=,>=,==,!=
+8. Type Casting: Used to convert a valid variable from one data type to other.
+		EG: input: a="1"
+			   b="2"
+  			   print(a+b)
+			   print(int(a)+int(b))
+		    output: 12
+			    3
+9.Input statement: Input is taken through the usage of [a=input()] and it stores the input in string
+		   EG: input: a=input("enter first number")
+			      b=input("enter second number")
+			      print(a+b)
+		       output:12   }inputted by the user
+			      10   }""    ""     ""   ""
+			      1210			
+10.len : To find the length of a function.
+	EG:
+		input: fruit="mango"
+		       len1=len(fruit)
+		       print(len1)
+		output:5
+11. Slicing: To print or extract the desiired elements from a string like fruit[0:4].[prints till (value-1) after ":"].
+		EG:
+		input:  fruit="Mango"
+			print(fruit[0:4])
+		output:	Mang	
+
+		Note: print(fruit[0:-4]) and print(fruit[0:len(fruit)-4])
+12. String methods:
+		* Upper Case: Converts to uppper case:[String.upper()]:	String
+				EG: Input: a="shubham"
+					   print(a.upper())
+				    Output: SHUBHAM
+
+		* Lower Case: Converts to lower case:[String.lower()]:	String
+				EG: Input: a="SHUBHAM"
+					   print(a.lower())
+				    Output: shubham
+
+		* Swap case: Converts upper to lower case and lower to upper case:[String.swapcase()]:	String
+				EG: Input: a="ShubhaM"
+					   print(a.swapcase())
+				    Output: sHUBHAm
+
+		* Strip: Strips off the characters in the string from the end:[String.rstrip("ANY CHARACTER")]:	String
+				EG: Input: a="SHUBHAM!!!"
+					   print(a.rstrip("!"))
+				    Output: SHUBHAM
+
+		* Replace: Converts all the words into the given words:[STRING.replace("Anything in the STRING","Anything we want")]:	String
+				EG: Input: a="Shubham"
+					   print(a.replace("Sh","A"))
+				    Output: Aubham
+
+		* Split: Converts the given sentence into multiple elements of a list by separating it by the given character:[String.split("Any separator")]:	String List
+				EG: Input: a="Hello Shubham"
+					   print(a.split(" "))
+				    Output:['Hello','Shubham']
+
+		* Capitalize: Converts the first character of the sentence to upper case and the rest to lower case:[String.capitalize()]:	String
+				EG: Input: a="shubham"
+					   print(a.capitalize())
+				    Output: Shubham
+		
+		* Ttitle: Converts the first character of each word of the sentence to upper case and the rest to lower case:[String.title()]:	String
+				EG: Input: a="shubham is here"
+					   print(a.capitalize())
+				    Output: Shubham Is Here
+
+		* Center: Centrelizes the words of a string:[String.center()]:	String
+				EG: Input: a="SHUBHAM"
+					   print(a.center())
+				    Output: 	     SHUBHAM
+
+		* Count: Calculates the number of occurances of a word or letter in the string:[String.count("")]:   int
+				EG: Input: a="Hello world Hello Life!"
+					   print(a.count("Hello"))
+				    Output: 2
+
+		* End: Checks if the string ends with a given word or not:[String.endswith(),index position start,end]:   boolean
+				EG: Input: a="Shubham"
+					   print(a.endswith("hu",1,2))
+				    Output: true
+
+		* Start: Checks if the string starts with a given word or not:[String.startswith(),index position start,end]:   boolean
+				EG: Input: a="Shubham"
+					   print(a.startswith("S"))
+				    Output: true
+
+		* Find: Finds the index number of the first occurances of the word or letter in the string and returns -1 if the word or letter is not there:[String.find("")]:	int
+				EG: Input: a="Shubham"
+					   print(a.find(u))
+				    Output: 2
+
+		* Index: Finds the index number of the first occurances of the word or letter in the string and terminates if not found:[String.index("")]:	int
+				EG: Input: a="Shubham"
+					   print(a.find(v))
+				    Output: Error
+
+		* Alnum: Returns true if only a-z and 0-9 irrespective of their case, is present and no other panctuations is present:[String.isalnum()]:	boolean
+				EG: Input: a="Shubham002"
+					   print(a.isalnum())
+				    Output: true
+					
+				    Input: a="Shubham0.20"
+					   print(a.isalnum())
+				    Output: false
+
+		* Alpha: Returns true if only a-z irrespective of their case, is present and no other panctuations is present:[String.isalpha()]:	boolean
+				EG: Input: a="Shubham"
+					   print(a.isalpha())
+				    Output: true
+					
+				    Input: a="Shubham.02"
+					   print(a.isalpha())
+				    Output: false
+
+		* IsLower: Returns true if all the charaacters in the string are in lower case:[String.islower()]:	boolean
+				EG: Input: a="Shubham"
+					   print(a.islower())
+				    Output: false
+					
+				    Input: a="shubham."
+					   print(a.islower())
+				    Output: true
+
+		* IsUpper: Returns true if all the charaacters in the string are in upper case:[String.isupper()]:	boolean
+				EG: Input: a="Shubham"
+					   print(a.isupper())
+				    Output: false
+					
+				    Input: a="SHUBHAM."
+					   print(a.isupper())
+				    Output: true
+
+		* IsTitle: Returns true if the first letter of all the words of a string is in caps:[String.istitle()]:	boolean
+				EG: Input: a="Hello Shubham"
+					   print(a.istitle())
+				    Output: true
+					
+				    Input: a="Hello shubham."
+					   print(a.istitle())
+				    Output: false
+
+13. Conditional statements:	
+			*if else: if(condition): 		[if true then]:
+					print(...)
+				  else:				[if false then]:
+					print(...)
+			          In if and else space is used as an alternate for {}.
+			*elif: elif is an alternate for else if.
+			*....if .... else ....
+14. Time function: Code:
+			import time
+			timestamp= time.strftime('%H:%M:%S')
+			print(timestamp)
+			hr=time.strftime('%H')
+			print(hr)
+			min=time.strftime('%M')
+			print(min)
+			sec=time.strftime('%S')
+			print(sec)
+			
+			Output:
+ 				14:14:33
+				14
+				14
+				33
+15.Match case: Switch case statement in python. Usage of break is not needed. EG:
+		s=4
+		match s:
+		    case 0:
+			....
+		    case 1:
+			....
+		    case 2:
+			....
+		    case 3:
+			....
+		    case 4:
+			....
+		    case _: [default case]
+			....
+16.Iteration through Loops:
+				* for:	input 1:
+					name="Abhishek"
+					for i in name   [i is the loop variable]
+					   print(i,end=",")
+					else
+					   print("Over")
+					output: A,b,h,i,s,h,e,k,Over
+				         
+					input 2:
+					for i in range(1,6)
+					   print(i,end=",")
+					output:
+					1,2,3,4,5,
+				* while:input:
+					i=0
+					while(i<3)
+					     print(i)
+					     i=i+1
+17.Functions:	input:
+			*def calc(a,b)
+			*def num(*calculate)  [for tuples(array)]
+			 	for i in calculate	
+18. Lists:*Basically arrays, 
+			marks=[1,2,3,4]
+			print(marks[-2]) //negative indexing
+		 output:
+			2
+		Input 2:
+			hi=["yellow","blue"]
+			if "yellow" in hi:
+				print("yellow" in hi)
+			else:
+				print("yellow" in hi)	
+		output:
+	 		True
+
+	   * Sort:
+		l.sort() // sorts in ascending order.
+		l.sort(reverse=true) // sorts in descending order.
+		l.insert(position,....) //inserts the .... in the given position. 
+	   * Methods:(l and m are two lists)
+		l.reverse() // reverses the list
+		l.index(....) //gives the index of the given variable in the list.
+		l.count(....) //counts the number of times a given variable is present in the list.	
+		m=l.copy() //to make a copy of the list l in m. m=l cannot be used as upon changing m, l also changes.
+		l.append(....) // adds the .... in the last position of the list.
+		l.extend(m) // attaches the list m at the end of l and stores in l.
+		k=l+m+n // concats multiple lists and stores in k.
+19. Tuples:Unchangeable arrays/list and is differentiated by a list by using "()" instead of "[]" while initialising.
+	   * Methods:(t is a tuple)
+		t.count(....,start index,end index) // counts the amount of occurances of .... within start index and end index.
+		l=len(t) // gives the length of the tuple.
+20. f-Strings:
+	* Methods: 
+		EG1:
+		Input:
+			letter="Hey, My name is {} and I am from {}."
+			country="India"
+			name="Shubham"
+			letter.format(name,country)
+	     	Output:
+			Hey, My name is Shubham and I am from India.
+
+	       	EG2:
+		Input:
+			country="India"
+			name="Shubham"
+			print(f"Hey, My name is {name} and I am from {coountry}.")
+		Output: SAME
+		
+		EG3:
+		Input:
+			price=25.0999
+			print(f"The cost is {price:.2f} rupees")
+		Output:
+			25.10
+		
+21. Docstring: Used to print the comments written right after the method after running the whole method.
+		Input:
+			def hi(n):
+			   ''' Hello world'''
+			   print(n*6)
+			hi(5)	
+			print(hi.__doc__)
+		Output:
+			30
+			Hello world
+
+22. Set: Used to make list of things which may repeat but it ommits the repeated data and cannot be changed later.
+		EG:
+		Input:
+			s={2,3,4,5,2,3,4,5}
+			print(s)
+		Output:
+			{2,3,4,5}
+			
+	Methods:
+		*Union: Set1.union(Set2)
+		*Uncommon(Adds variables of Set2 to that of Set1 that are not present already and stores in set 1): Set1.update(Set2)
+		*Intersection(common): Set1.intersection(Set2)
+		*Intersection_update(intersection but stores in Set1): Set1.intersection_update(Set2)
+23. Dictonary: Used to map two words or anth. dic={key:value}
+			EG:
+				input:
+					dic={"Shubham":"human","Tommy":"Dog"}
+					print(dic["Shubham"])
+				output:
+					human
+				input:
+					dic={"Shubham":"human","Tommy":"Dog"}
+					print(dic.get["aa"])
+				output:
+					None
+		Method:(info and ep is a dictonary variable)
+			*...=info.keys: gives the keys.
+			*...=info.values: gives the values.
+			*info.update(ep): updates the value of info from ep.
+			*info.clear(): clears the dictonary.
+			*info.pop(....): gives the keyword of the value.... .
+			*info.popitem(): gives the last keyword.
+			*del.info(....): deletes the keyword on .... .
+24. OS Module: To comtrol folder and item in storage.
+		* os.mkdir("...."): creates a folder named .... .
+		* os.path.exists("...."): Gives true if the file .... already exists.
+		EG:
+		 input:
+			import os 
+			if(not os.path.exists("Data")):
+    				os.mkdir("Data")
+			for i in range(0,100):
+    				os.mkdir(f"day {i+1}")
+
+		 output:
+			Returns false in if and goes to loop and runs 100 times and creates 100 folders in alr created folder.	
+		
+		* os.rename(".source.",".destination."): Changes the name of the .source. file into .destination. file.
+		* os.listdir("...."): Gives the name of the folders inside .... .
+25. IO File(File Handling):
+		*Read: 	f=open("....","r")
+		       	text=f.read()
+		*Write: f=open("....","w")
+		*Create: f=open("....","c")
+		*Text file: f=open("....","rt")
+		*Binary file: f=open("....","rb") [For images, pdfs and etc]
+		*Line:  f=open("....","r")
+			while True:
+				line=f.readline()
+				print(line)
+				if not line:
+					break
+		*Seek: f.seek(....): Starts from this index number.
+		*Tell: f.tell(): Tells the position till which seek is applied.
+		*Truncate: f.truncate(....): Trims the file to .... bits/characters.
+26.Lambda Functions:
+		
+		
+				
+		
+			
+		
